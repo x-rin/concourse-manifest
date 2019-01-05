@@ -4,3 +4,4 @@ bases:
 patches:
   - ./configmap.yaml
   - ./service.yaml
+  - ./deployment.yaml

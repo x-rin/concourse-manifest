@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: concourse-web
+  labels:
+    app: concourse-web
+spec:
+  selector:
+    matchLabels:
+      app: concourse-web
+  template:
+    spec:
+      containers:
+        - name: concourse-web
+          env:
+            - name: CONCOURSE_GITHUB_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  key: clinet-id
+                  name: concourse-github
+            - name: CONCOURSE_GITHUB_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  key: client-secret
+                  name: concourse-github
+            - name: CONCOURSE_MAIN_TEAM_GITHUB_ORG
+              valueFrom:
+                configMapKeyRef:
+                  key: main-team-github-org
+                  name: concourse-web
+            - name: CONCOURSE_MAIN_TEAM_LOCAL_USER
+              $patch: delete
