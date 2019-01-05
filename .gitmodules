@@ -1,0 +1,3 @@
+[submodule "kubernetes-manifests"]
+	path = kubernetes-manifests
+	url = https://github.com/cappyzawa/kubernetes-manifests
