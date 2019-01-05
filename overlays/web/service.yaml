@@ -6,6 +6,7 @@ metadata:
     app: concourse-web
 spec:
   type: LoadBalancer
+  loadBalancerIP: 35.226.5.126
   ports:
     - port: 8080
       $patch: delete
