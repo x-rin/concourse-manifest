@@ -1,5 +1,6 @@
 bases:
   - ../../kubernetes-manifests/base/concourse/postgres
+  - ../../bases/postgres
 
 patches:
   - ./deployment.yaml
