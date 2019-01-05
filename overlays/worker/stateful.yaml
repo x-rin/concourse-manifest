@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: concourse-worker
+spec:
+  replicas: 1
+  volumeClaimTemplates:
+    - metadata:
+        name: concourse-work-dir
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 20Gi
