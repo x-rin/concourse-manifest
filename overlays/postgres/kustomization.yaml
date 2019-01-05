@@ -2,4 +2,5 @@ bases:
   - ../../kubernetes-manifests/base/concourse/postgres
 
 patches:
+  - ./deployment.yaml
   - ./service.yaml
