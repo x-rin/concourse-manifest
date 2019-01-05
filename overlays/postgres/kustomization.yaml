@@ -1,0 +1,5 @@
+bases:
+  - ../../kubernetes-manifests/base/concourse/postgres
+
+patches:
+  - ./service.yaml
