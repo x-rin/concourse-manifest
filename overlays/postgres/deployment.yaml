@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: concourse-postgresql
+  labels:
+    app: concourse-postgresql
+spec:
+  selector:
+    matchLabels:
+      app: concourse-postgresql
+  template:
+    metadata:
+      labels:
+        app: concourse-postgresql
+    spec:
+      containers:
+        - name: concourse-postgresql
+      volumes:
+        - name: data
+          $patch: delete
+        - name: data
+          persistentVolumeClaim:
+            claimName: concourse-postgresql

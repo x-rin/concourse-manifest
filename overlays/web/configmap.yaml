@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: concourse-web
+  labels:
+    app: concourse-web
+data:
+  #  postgres-host: "10.107.145.4"
+  external-url: "http://35.226.5.126"
+  prometheus-bind-ip: "0.0.0.0"
+  prometheus-bind-port: "9391"
+  resource-checking-interval: 12h
+  resource-type-checking-interval: 12h
+  main-team-github-org: kutsuzawa

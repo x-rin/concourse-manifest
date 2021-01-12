@@ -1,0 +1,7 @@
+bases:
+  - ../../kubernetes-manifests/base/concourse/web
+
+patches:
+  - ./configmap.yaml
+  - ./service.yaml
+  - ./deployment.yaml

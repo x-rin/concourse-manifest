@@ -1,0 +1,6 @@
+bases:
+  - ../../kubernetes-manifests/base/concourse/worker
+
+patches:
+  - ./configmap.yaml
+  - ./stateful.yaml
